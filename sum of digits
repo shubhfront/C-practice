@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+void main() {
+    // to print the sum of digits of given number
+    
+    int mynum;
+    
+    printf("type a number to print the table:  \n");
+    scanf("%d", &mynum);
+    
+    int sum = 0;
+    int indiNumber, remainderNum;
+    while (mynum != 0)
+    {
+        remainderNum = mynum%10;
+        sum += remainderNum;
+        mynum/=10;
+    }
+    printf("the sum of the digits of a given number is %d", sum);
+}
