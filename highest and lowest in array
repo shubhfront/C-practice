@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+// to find the greatest and lowest number in an array
+void main() {
+    int myArray[] = {61, 20, 35, 18, 12, 80, 75};
+    
+    int greatest = myArray[0];
+    int lowest = myArray[0];
+    int length = sizeof(myArray)/sizeof(myArray[0]);
+    
+    for (int i=0; i< length; i++ )
+    {
+        if (greatest < myArray[i])
+        {
+            greatest = myArray[i];
+        }
+        if (lowest > myArray[i])
+        {
+            lowest = myArray[i];
+        }
+    }
+    printf("the greatest number is %d\n", greatest);
+    printf("the lowest number is %d\n", lowest);
+}
