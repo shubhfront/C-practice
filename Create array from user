@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <stdbool.h>
+#include <string.h>
+
+void main(){
+    // take the input of the array from user by using while loop
+    int myArray[70];
+    int i= 0;
+    char choice;
+    while (true)
+    {
+        int ArrElement; 
+        printf("Enter element of array: ");
+        scanf("%d", &ArrElement);
+        myArray[i] = ArrElement;
+        i++;
+        printf("Enter more(y/n): ");
+        scanf(" %s", &choice);
+        
+        if (choice == 'n' || i >= 70)
+        {
+            break;
+        }
+    }
+    printf("The entered Array is :\n[");
+    for (int j=0; j<i; j++)
+    {
+        printf("%d, ", myArray[j]);
+    }
+    printf("]");
+}
