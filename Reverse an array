@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+void main()
+{
+    // code to reverse an array
+    int myArray[] = {12, 30, 35, 43, 42};
+    
+    int length = sizeof(myArray)/sizeof(myArray[0]);
+    int revArray[length];
+
+    for(int i=0; i<=length-1; i++)
+    {
+        revArray[i] = myArray[length-i-1];
+    }
+    
+    for (int i=0; i<length; i++)
+    {
+        printf("%d ", revArray[i]);
+    }
+}
