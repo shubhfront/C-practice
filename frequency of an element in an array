@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+// code to get the frequency of element
+
+int main(){
+    int myArray[] = {20, 30, 40, 50, 60, 70, 80};
+    
+    int myNum;
+    int count =0;
+    printf("Enter the element you want to find the frequency: ");
+    scanf("%d", &myNum);
+    
+    int length = sizeof(myArray)/sizeof(myArray[0]);
+    printf("%d\n", length);
+    for(int i=0; i<length; i++)
+    {
+        if(myArray[i] == myNum)
+        {
+            count+=1;
+            i++;
+        }
+    }
+    printf("the frequency of %d is %d", myNum, count);
+    
+}
