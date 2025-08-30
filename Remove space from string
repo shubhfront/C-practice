@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <string.h>
+
+// code to remove the space from the string 
+void main()
+{
+    char input[70];
+    printf("Enter a string: ");
+    fgets(input, sizeof(input), stdin);
+    
+    char nospace[70];
+    int strlength = strlen(input);
+    
+    int j = 0;
+    for (int i=0; i<strlength; i++)
+    {
+        char ch = input[i];
+        if(ch != ' ')
+        {
+            nospace[j] = ch;
+            j++;
+        }
+        
+    }
+    printf("the string is %s", nospace);
+    
+}
