@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <string.h>
+
+void main()
+{
+    char input[20];
+    printf("Enter the element to input: ");
+    scanf("%s", &input);
+    
+    int vowels[] = {'a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'};
+    int arrlen = sizeof(vowels)/sizeof(vowels[0]);
+    int strlength = strlen(input);
+    int count=0;
+    for (int i=0; i<strlength; i++)
+    {
+        char ch = input[i];
+        
+        for(int j=0; j<arrlen; j++)
+        {
+            if(ch == vowels[j])
+            {
+                count++;
+            }
+        }
+    }
+    
+    printf("the number of vowels in string is %d\n", count);
+    int consonant = strlength - count;
+    printf("the number of consonants in string is %d\n", consonant);
+    
+}
