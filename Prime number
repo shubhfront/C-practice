@@ -1,0 +1,24 @@
+#include <stdio.h>
+void main() {
+    int number;
+    printf("You want to find prime numbers upto: ");
+    scanf("%d", &number);
+    
+    printf("The prime numners between 1 and %d are:\n", number);
+    
+    for (int i=1; i<number; i++)
+    {
+        int multipleCount = 0;
+        for (int j=1; j<i; j++)
+        {
+            if (i % j == 0)
+            {
+                multipleCount++;
+            }
+        }
+        if (multipleCount == 1)
+        {
+            printf("%d ", i);
+        }
+    }
+}
