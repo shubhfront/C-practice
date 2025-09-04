@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int factorial(int n, int prod){
+    if (n == 1)
+    {
+        return prod;
+    }
+    return factorial(n-1, prod*n);
+}
+void main(){
+    int myNum;
+    printf("write the number you want to find factorial: ");
+    scanf("%d", &myNum);
+    
+    printf("%d", factorial(myNum, 1));
+}
