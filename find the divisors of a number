@@ -1,0 +1,20 @@
+// Print all divisors of a number
+
+#include <stdio.h>
+
+void main(){
+    int enterNum;
+    printf("Enter a number to find the divisors: ");
+    scanf("%d", &enterNum);
+    
+    printf("All the divisors of %d are:\n", enterNum);
+    
+    for (int i=1; i<=enterNum; i++)
+    {
+        if (enterNum%i == 0)
+        {
+           printf("%d ", i); 
+        }
+    }
+}
+
