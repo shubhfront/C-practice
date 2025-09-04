@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+void main(){
+    int firstNum; int secondNum;
+    printf("Enter the first two terms of fibonacci series: ");
+    scanf("%d %d", &firstNum, &secondNum);
+    
+    int terms;
+    printf("Enter the number of terms: ");
+    scanf("%d", &terms);
+    
+    int fiboArray[terms];
+    
+    fiboArray[0] = firstNum;
+    fiboArray[1] = secondNum;
+    
+    for (int i=2; i<terms; i++)
+    {
+        int nextTerm = fiboArray[i-2] + fiboArray[i-1];
+        fiboArray[i] = nextTerm;
+    }
+    
+    printf("the fibonacci series is as below:\n");
+    
+    for (int i=0; i<terms; i++)
+    {
+        printf("%d ", fiboArray[i]);
+    }
+ 
+}
