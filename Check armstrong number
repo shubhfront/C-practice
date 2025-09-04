@@ -1,0 +1,52 @@
+#include <stdio.h>
+#include <stdbool.h>
+#include <math.h>
+
+int armstrongCheck(int numb){
+    int myNum = numb;
+    int count=0;
+    
+    while (true)
+    {
+        if (numb%10 != 0)
+        {
+            numb = numb/10;
+            count ++;
+        }
+        else
+        {
+            break;
+        }
+    }
+    
+    int armChk = myNum;
+    int armSum = 0; int rem;
+    
+    for (int i=1; i<=count; i++)
+    {
+        rem = myNum%10;
+        int digPower = pow(rem, count);
+        armSum = armSum + digPower;
+        myNum /= 10;
+    }
+    
+    return armSum;
+}
+
+
+void main() {
+    int enterNum;
+    printf("Enter a number you want to check: ");
+    scanf("%d", &enterNum);
+    
+    int armNum = armstrongCheck(enterNum);
+
+    if (enterNum == armNum)
+    {
+        printf("The number %d is armstrong number", enterNum);
+    }
+    else
+    {
+        printf("The number %d is not armstrong number", enterNum);
+    }
+}
