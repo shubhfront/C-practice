@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int sumNum(int n, int i, int sum){
+    
+    if (i>n)
+    {
+        return sum;
+    }
+    return sumNum(n, i+1, sum+i);
+}
+
+void main(){
+    int strtNum; int endNum;
+    printf("enter the end number and start number: ");
+    scanf("%d %d", &strtNum, &endNum);
+    
+    printf("%d", sumNum(endNum, strtNum, 0));
+    
+}
