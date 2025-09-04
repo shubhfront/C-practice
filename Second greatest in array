@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+void main(){
+    int myArray[] = {10,11, 18, 40, 45, 8, 35};
+    int arrLength = sizeof(myArray)/sizeof(myArray[0]);
+    
+    int greatest = myArray[0];
+    int secondGreat = myArray[0];
+    
+    for (int i=0; i<arrLength; i++)
+    {
+        if (greatest < myArray[i])
+        {
+            greatest = myArray[i];
+        }
+    }
+    for (int i=0; i<arrLength; i++)
+    {
+        if (secondGreat < myArray[i] & myArray[i] < greatest)
+        {
+            secondGreat = myArray[i];
+        }
+    }
+    printf("the second greatest is %d", secondGreat);
+}
