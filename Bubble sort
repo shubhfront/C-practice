@@ -6,7 +6,7 @@ int main(){
     int length = sizeof(myArr)/sizeof(myArr[0]);
     for (int i=0; i<length; i++)
     {
-        for (int j=0; j<length; j++)
+        for (int j=0; j<length-1; j++)
         {
             int first = myArr[j+1];
             int second = myArr[j];
