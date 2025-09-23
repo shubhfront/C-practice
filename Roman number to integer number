@@ -1,0 +1,36 @@
+#include <iostream>
+#include <map>
+#include <string>
+using namespace std;
+
+int main(){
+    map<char, int> roman;
+    roman['I'] = 1;
+    roman['V'] = 5;
+    roman['X'] = 10;
+    roman['L'] = 50;
+    roman['C'] = 100;
+    roman['D'] = 500;
+    roman['M'] = 1000;
+    
+    string UserRoman;
+    cout << "Enter a roman number: ";
+    cin >> UserRoman;
+    
+    int outNumber = 0;
+    for (int i=0; i<UserRoman.length(); i++)
+    {
+        char SingleRoman = UserRoman[i];
+        int Number = roman[singleRoman];
+        if (roman[UserRoman[i]] < roman[UserRoman[i+1]])
+        {
+            outNumber = outNumber - Number;
+        }
+        else 
+        {
+            outNumber = outNumber + Number;
+        }
+    }
+    
+    cout << "The Interger number for" << UserRoman <<  "is: " << outNumber << endl;
+}
